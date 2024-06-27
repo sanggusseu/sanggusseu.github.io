@@ -26,6 +26,9 @@
   --btn-bg-color: var(--light-blue);
   --border-color: var(--light-gray);
   --bg-color: var(--white);
+
+  /* Size */
+  --header-height: 8rem;
 }
 
 html {
@@ -38,15 +41,22 @@ body {
   font-family: var(--body-font);
   color: var(--primary-color);
   font-size: 1.6rem;
+  line-height: 150%;
 }
 
 button {
+  color: inherit;
   font-family: var(--body-font);
+  background-color: transparent;
 }
 
 /* Header */
 
 .header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
   display: flex;
   justify-content: center;
   padding: 0 2.4rem;
@@ -59,7 +69,7 @@ button {
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  height: 8rem;
+  height: var(--header-height);
   max-width: 144rem;
 }
 
@@ -98,4 +108,120 @@ button {
 
 .email-btn:hover {
   background-color: var(--point-color);
+}
+
+/* Main */
+
+.main {
+  display: flex;
+  justify-content: center;
+  padding: var(--header-height) 2.4rem 0;
+}
+
+.container {
+  width: 100%;
+  max-width: 117.6rem;
+}
+
+.user-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 3.2rem 0 2.4rem;
+}
+
+.user-left {
+  display: flex;
+  align-self: center;
+}
+
+.user-img {
+  display: block;
+  width: 145px;
+  height: 145px;
+  margin-right: 3.2rem;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.user-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.info-top {
+  display: flex;
+  align-items: center;
+  column-gap: 0.4rem;
+  margin-bottom: 2rem;
+}
+
+.user-badge {
+  position: relative;
+  top: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 3.2rem;
+  height: 3.2rem;
+  font-size: 2rem;
+  color: var(--blue);
+}
+
+.user-name {
+  font-size: 3.2rem;
+  line-height: 100%;
+  font-weight: 700;
+  color: var(--primary-color);
+}
+
+.info-bottom {
+  display: flex;
+  align-items: center;
+  column-gap: 1.6rem;
+}
+
+.user-email {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  column-gap: 0.6rem;
+  padding: 0.6rem 1.2rem;
+  min-height: 3.6rem;
+  font-size: 1.4rem;
+  color: var(--tertiary-color);
+  background-color: var(--border-color);
+  border-radius: 1.2rem;
+}
+
+.user-job {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--point-color);
+}
+
+.user-list {
+  display: flex;
+  align-items: center;
+  column-gap: 1.6rem;
+}
+
+.user-item {
+  border-radius: 0.4rem;
+}
+
+.user-item a,
+.user-item button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  column-gap: 0.6rem;
+  padding: 0.8rem 1.2rem;
+  font-size: 1.4rem;
+}
+
+.user-item:hover {
+  color: #006d7c;
+  background-color: var(--btn-bg-color);
 }
