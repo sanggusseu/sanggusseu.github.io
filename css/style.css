@@ -25,6 +25,7 @@
   --point-color: var(--turquoise);
   --btn-bg-color: var(--light-blue);
   --border-color: var(--light-gray);
+  --bg-color: var(--white);
 }
 
 html {
@@ -32,7 +33,69 @@ html {
 }
 
 body {
+  width: 100%;
+  height: 100vh;
   font-family: var(--body-font);
   color: var(--primary-color);
   font-size: 1.6rem;
+}
+
+button {
+  font-family: var(--body-font);
+}
+
+/* Header */
+
+.header {
+  display: flex;
+  justify-content: center;
+  padding: 0 2.4rem;
+  background-color: var(--bg-color);
+  border-bottom: 1px solid var(--border-color);
+}
+
+.header-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 8rem;
+  max-width: 144rem;
+}
+
+.header-title {
+  font-size: 2.4rem;
+  font-weight: 700;
+}
+
+.header-list {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  column-gap: 0.8rem;
+}
+
+.header-item a {
+  display: block;
+  padding: 0.8rem 1.6rem;
+}
+
+.header-item:hover {
+  font-weight: 700;
+  color: var(--point-color);
+}
+
+.email-btn {
+  height: 4.4rem;
+  padding: 0 1.6rem;
+  margin-left: 1.6rem;
+  font-size: 1.6rem;
+  color: var(--black);
+  background-color: var(--btn-bg-color);
+  border-radius: 0.8rem;
+  transition: background-color 200ms;
+}
+
+.email-btn:hover {
+  background-color: var(--point-color);
 }
