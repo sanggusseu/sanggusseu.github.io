@@ -225,3 +225,14 @@ button {
   color: #006d7c;
   background-color: var(--btn-bg-color);
 }
+
+/* Footer */
+
+.footer {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  padding: 7rem 0;
+  color: var(--secondary-color);
+  background-color: var(--dark-teal);
+}
