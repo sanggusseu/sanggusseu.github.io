@@ -26,6 +26,7 @@
   --btn-bg-color: var(--light-blue);
   --border-color: var(--light-gray);
   --bg-color: var(--white);
+  --hover-color: #006d7c;
 
   /* Size */
   --header-height: 8rem;
@@ -109,11 +110,11 @@ button {
   color: var(--black);
   background-color: var(--btn-bg-color);
   border-radius: 0.8rem;
-  transition: background-color 200ms;
+  transition: color 200ms;
 }
 
 .email-btn:hover {
-  background-color: var(--point-color);
+  color: var(--hover-color);
 }
 
 /* Main */
@@ -237,7 +238,7 @@ button {
 }
 
 .user-item:hover {
-  color: #006d7c;
+  color: var(--hover-color);
   background-color: var(--btn-bg-color);
 }
 
