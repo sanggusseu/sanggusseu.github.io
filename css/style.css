@@ -64,6 +64,12 @@ button {
   border-bottom: 1px solid var(--border-color);
 }
 
+.header-logo {
+  display: block;
+  width: 32px;
+  height: 32px;
+}
+
 .header-wrapper {
   display: flex;
   justify-content: space-between;
