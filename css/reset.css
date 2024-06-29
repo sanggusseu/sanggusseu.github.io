@@ -145,3 +145,7 @@ input[type='button'] {
   outline: none;
   cursor: pointer;
 }
+
+input[type='radio'] {
+  margin: 0;
+}
