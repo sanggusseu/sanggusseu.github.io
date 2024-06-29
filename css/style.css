@@ -410,3 +410,133 @@ button {
   font-size: 1.2rem;
   color: var(--secondary-color);
 }
+
+/* Skills */
+
+.skill-tree {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgba(30, 30, 30, 0.8);
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+.branch {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.tier {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 30px;
+  position: relative;
+}
+
+.skill {
+  width: 80px;
+  height: 80px;
+  background-color: #2a2a2a;
+  border: 2px solid #444;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0 15px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.skill:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
+}
+
+.skill::before {
+  content: '';
+  position: absolute;
+  top: -25px;
+  left: 50%;
+  width: 2px;
+  height: 25px;
+  background-color: #555;
+}
+
+.skill::after {
+  content: '';
+  position: absolute;
+  bottom: -25px;
+  left: 50%;
+  width: 2px;
+  height: 25px;
+  background-color: #555;
+}
+
+.tier:first-child .skill::before,
+.tier:last-child .skill::after {
+  display: none;
+}
+
+.skill-icon {
+  color: var(--white);
+  font-size: 24px;
+  margin-bottom: 5px;
+}
+
+.skill-name {
+  color: var(--white);
+  font-size: 10px;
+  text-align: center;
+  opacity: 0.7;
+}
+
+.skill.active {
+  background-color: #4caf50;
+  border-color: #45a049;
+}
+
+.skill.active:hover {
+  background-color: #45a049;
+}
+
+.skill.locked {
+  background-color: #1a1a1a;
+  border-color: #333;
+  cursor: not-allowed;
+}
+
+.skill.locked:hover {
+  transform: none;
+  box-shadow: none;
+}
+
+.skill.locked .skill-icon,
+.skill.locked .skill-name {
+  opacity: 0.3;
+}
+
+.branch-name {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
+}
+
+.horizontal-line {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background-color: #555;
+  z-index: -1;
+}
