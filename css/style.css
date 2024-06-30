@@ -272,6 +272,13 @@ button {
   border-bottom: 4px solid transparent;
 }
 
+.tab-btn:disabled {
+  color: var(--tertiary-color) !important;
+  border-bottom-color: transparent !important;
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
 .tab-btn.active,
 .tab-btn:hover {
   color: var(--point-color);
